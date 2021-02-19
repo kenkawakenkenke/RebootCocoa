@@ -1,0 +1,6 @@
+<resources>
+  <string name="app_name">COCOA再起動アプリ</string>
+  <string name="reboot_notification_title">COCOA再起動アプリ</string>
+  <string name="reboot_notification_content">COCOA起動するよ〜</string>
+  <string name="reboot_notification_channel_name">再起動通知</string>
+</resources>
