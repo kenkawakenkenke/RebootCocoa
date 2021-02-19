@@ -3,7 +3,6 @@ package com.notgov.rebootcocoa;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +20,7 @@ private static final String TAG = "DailyAlarmReceiver";
   public static final String REBOOT_COCOA_NOTIFICATION_CHANNEL_ID
       = "com.notgov.rebootcocoa.rebootnotif";
 
+
   @Override
   public void onReceive(Context context, Intent intent) {
     Log.i(TAG, "Received alarm");
@@ -28,15 +28,8 @@ private static final String TAG = "DailyAlarmReceiver";
     // Setup the notification channel.
     maybeSetupNotificationChannel(context);
 
-    // Intent to restart COCOA app.
-    PendingIntent rebootCocoaIntent =
-        PendingIntent.getActivity(
-            context,
-            0,
-            context.getPackageManager().getLaunchIntentForPackage(
-                "jp.go.mhlw.covid19radar"),
-            PendingIntent.FLAG_ONE_SHOT);
-
+    // Notification to tell the user that they need to reboot COCOA. Clicking
+    // on the notification lets them reboot COCOA.
     Notification notification = new NotificationCompat.Builder(context,
         REBOOT_COCOA_NOTIFICATION_CHANNEL_ID)
         .setOngoing(true)
@@ -47,7 +40,7 @@ private static final String TAG = "DailyAlarmReceiver";
         .setCategory(Notification.CATEGORY_SERVICE)
         .setAutoCancel(true)
         .setOngoing(false)
-        .setContentIntent(rebootCocoaIntent)
+        .setContentIntent(RebootCocoaService.constructRebootIntent(context))
         .build();
 
     NotificationManager notificationManager =
