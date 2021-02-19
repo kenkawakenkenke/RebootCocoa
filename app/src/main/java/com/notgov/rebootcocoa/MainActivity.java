@@ -39,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding = DataBindingUtil.setContentView(this,
         R.layout.activity_main);
     SettingsViewModel viewModel =
-        new ViewModelProvider(this).get(SettingsViewModel.class);
-    viewModel.initialize(storedSettings);
+        new ViewModelProvider(this,
+            new SettingsViewModel.Factory(storedSettings))
+            .get(SettingsViewModel.class);
     binding.setViewModel(viewModel);
     binding.setLifecycleOwner(this);
 
