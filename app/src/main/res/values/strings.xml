@@ -3,4 +3,24 @@
   <string name="reboot_notification_title">COCOA再起動アプリ</string>
   <string name="reboot_notification_content">COCOA起動するよ〜</string>
   <string name="reboot_notification_channel_name">再起動通知</string>
+  <!--  MainLayout-->
+  <string name="main_overview_title">これなに？</string>
+  <string name="main_overview_description">2021年2月18日、
+厚労省は新型コロナウイルス接触確認アプリ（通称COCOA）を一日に一度再起動しないと
+正常に動作しない可能性があると発表しました。そんなの覚えてられないですよね？このアプリをインストールしていると、
+自動的に毎日通知が表示され、タップするとCOCOAが再起動されます。</string>
+  <string name="main_howto_title">使い方</string>
+  <string name="main_howto_description">インストールしただけで大丈夫です。下で設定した時間に毎日通知が送られてきます。通知を止めたければ、アンインストールしてください。</string>
+
+  <string name="main_settings_title">設定</string>
+  <string name="main_settings_time_title">通知の時間</string>
+  <string name="main_settings_time_error_wrongformat">時刻は「10:45」のように表記してください</string>
+
+  <string name="main_settings_mode">通知モード</string>
+  <string name="main_settings_mode_normal">通常（一日一回再起動します）</string>
+  <string name="main_settings_mode_beast">猛烈（一分に一回再起動します。開発者用です。）</string>
+
+  <string name="main_settings_save">設定を保存</string>
+  <string name="main_settings_cancel">リセット</string>
+
 </resources>
