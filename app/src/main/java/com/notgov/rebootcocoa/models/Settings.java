@@ -94,31 +94,6 @@ public abstract class Settings {
     diff.addSource(other.getNotificationMode(), v -> differ.run());
     return diff;
   }
-//
-//  /**
-//   * Validates the value of a time object.
-//   */
-//  static boolean validate(@Nullable Pair<Integer, Integer> notificationTime) {
-//    if (notificationTime == null) {
-//      return false;
-//    }
-//    int hours = notificationTime.first;
-//    if (hours < 0 || hours >= 24) {
-//      return false;
-//    }
-//    int minutes = notificationTime.second;
-//    if (minutes < 0 || minutes >= 60) {
-//      return false;
-//    }
-//    return true;
-//  }
-//
-//  /**
-//   * Validates the value of a {@link NotificationMode}.
-//   */
-//  static boolean validate(@Nullable NotificationMode mode) {
-//    return mode != null;
-//  }
 
   /**
    * Returns true if the current value of ourselves is valid (i.e is ok to be
