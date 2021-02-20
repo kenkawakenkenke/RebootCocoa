@@ -1,4 +1,4 @@
-package com.notgov.rebootcocoa;
+package com.notgov.rebootcocoa.rebooter;
 
 import android.app.Activity;
 import android.app.ActivityManager;

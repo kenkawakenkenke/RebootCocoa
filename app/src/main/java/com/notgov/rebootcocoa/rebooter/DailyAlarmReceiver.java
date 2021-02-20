@@ -1,4 +1,4 @@
-package com.notgov.rebootcocoa;
+package com.notgov.rebootcocoa.rebooter;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
+import com.notgov.rebootcocoa.R;
 
 /**
  * Handler for the daily alarms. Shows a notification for the user, which opens
